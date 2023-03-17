@@ -1,0 +1,56 @@
+.search {
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  @include respond(TAB) {
+    display: grid;
+    place-items: center;
+  }
+
+  label {
+    font-size: 3rem;
+    color: #1098ad;
+    display: block;
+    margin-bottom: 3rem;
+
+    @include respond(PHONE) {
+      font-size: 2rem;
+      text-align: center;
+    }
+  }
+  &_form {
+    &_input {
+      width: 50%;
+      height: 3rem;
+      border: none;
+      border-bottom: 3px solid #1098ad;
+      background: none;
+      font-size: 3rem;
+      outline: none;
+      padding: 1rem;
+      columns: #1098ad;
+      @include respond(TAB) {
+        width: 100%;
+        border: 3px solid #1098ad;
+        height: 5rem;
+        padding: 2rem;
+      }
+    }
+    &_error {
+      font-size: 3rem;
+      color: red;
+
+      @include respond(TAB) {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.loading_home {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
